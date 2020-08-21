@@ -1,10 +1,10 @@
 # shibasama
 
-### Progress
+## Progress
 ### Working on
 - Home page 
 
-## Problem
+### Problem
 - currently nothing
 
 ## Project setup
