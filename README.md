@@ -1,7 +1,7 @@
 # shibasama
 
 ### Progress
-## Working on
+### Working on
 - Home page 
 
 ## Problem
