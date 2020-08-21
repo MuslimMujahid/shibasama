@@ -1,5 +1,12 @@
 # shibasama
 
+### Progress
+## Working on
+- Home page 
+
+## Problem
+- currently nothing
+
 ## Project setup
 ```
 npm install
