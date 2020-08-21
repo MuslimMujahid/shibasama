@@ -1,12 +1,13 @@
 <template>
-    <div class="inline-flex items-center border-0 border-b-1">
+    <div class="inline-flex items-center">
         <input 
             type="text" 
             id="search" 
             placeholder="Search ..."
             class="bg-transparent 
-                    text-lg px-2 py-1 
+                    text-lg py-1 
                     text-gray-600
+                    font-semibold
                     focus:outline-none">
         <label for="search">
             <SearchIcon />
@@ -26,4 +27,7 @@ export default {
 
 <style scoped>
 
+    input {
+        min-width: 250px;
+    }
 </style>

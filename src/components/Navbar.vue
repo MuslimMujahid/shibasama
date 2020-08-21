@@ -6,7 +6,7 @@
         <img 
             src="../assets/images/Long-Logo-Dark.png"
             class="h-10">
-        <SearchBar class="SearchBar border-b-2 border-gray-500"/>
+        <SearchBar class="SearchBar border-gray-500"/>
         <SettingIcon />    
     </div>    
 </template>
@@ -25,4 +25,8 @@ export default {
 </script>
 
 <style scoped>
+
+    .SearchBar {
+        border-bottom-width: 1px;
+    }
 </style>
