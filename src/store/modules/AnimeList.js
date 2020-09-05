@@ -113,12 +113,145 @@ const state = {
             },
             episode: 1
         }
+    ],
+    history: [
+        {
+            id: 1,
+            date: 'Thursday, 13-08-2020',
+            log: [
+                {
+                    title: 'One Piece - Episode 300 at',
+                    time: '10:24:36 PM',
+                    progress: 5
+                },
+                {
+                    title: 'One Piece - Episode 300 at',
+                    time: '10:24:36 PM',
+                    progress: 55
+                },
+                {
+                    title: 'One Piece - Episode 300 at',
+                    time: '10:24:36 PM',
+                    progress: 85
+                },
+                {
+                    title: 'One Piece - Episode 300 at',
+                    time: '10:24:36 PM',
+                    progress: 100
+                }
+            ]
+        },
+        {
+            id: 2,
+            date: 'Thursday, 13-08-2020',
+            log: [
+                {
+                    title: 'One Piece - Episode 300 at',
+                    time: '10:24:36 PM',
+                    progress: 5
+                },
+                {
+                    title: 'One Piece - Episode 300 at',
+                    time: '10:24:36 PM',
+                    progress: 55
+                },
+                {
+                    title: 'One Piece - Episode 300 at',
+                    time: '10:24:36 PM',
+                    progress: 85
+                },
+                {
+                    title: 'One Piece - Episode 300 at',
+                    time: '10:24:36 PM',
+                    progress: 100
+                }
+            ]
+        },
+        {
+            id: 3,
+            date: 'Thursday, 13-08-2020',
+            log: [
+                {
+                    title: 'One Piece - Episode 300 at',
+                    time: '10:24:36 PM',
+                    progress: 5
+                },
+                {
+                    title: 'One Piece - Episode 300 at',
+                    time: '10:24:36 PM',
+                    progress: 55
+                },
+                {
+                    title: 'One Piece - Episode 300 at',
+                    time: '10:24:36 PM',
+                    progress: 85
+                },
+                {
+                    title: 'One Piece - Episode 300 at',
+                    time: '10:24:36 PM',
+                    progress: 100
+                }
+            ]
+        },
+        {
+            id: 4,
+            date: 'Thursday, 13-08-2020',
+            log: [
+                {
+                    title: 'One Piece - Episode 300 at',
+                    time: '10:24:36 PM',
+                    progress: 5
+                },
+                {
+                    title: 'One Piece - Episode 300 at',
+                    time: '10:24:36 PM',
+                    progress: 55
+                },
+                {
+                    title: 'One Piece - Episode 300 at',
+                    time: '10:24:36 PM',
+                    progress: 85
+                },
+                {
+                    title: 'One Piece - Episode 300 at',
+                    time: '10:24:36 PM',
+                    progress: 100
+                }
+            ]
+        },
+        {
+            id: 5,
+            date: 'Thursday, 13-08-2020',
+            log: [
+                {
+                    title: 'One Piece - Episode 300 at',
+                    time: '10:24:36 PM',
+                    progress: 5
+                },
+                {
+                    title: 'One Piece - Episode 300 at',
+                    time: '10:24:36 PM',
+                    progress: 55
+                },
+                {
+                    title: 'One Piece - Episode 300 at',
+                    time: '10:24:36 PM',
+                    progress: 85
+                },
+                {
+                    title: 'One Piece - Episode 300 at',
+                    time: '10:24:36 PM',
+                    progress: 100
+                }
+            ]
+        }
     ]
 }
 
 const getters = {
     trending: state => state.trending,
-    placeholder: state => state.placeholder
+    placeholder: state => state.placeholder,
+    history: state => state.history
 }
 
 const actions = {

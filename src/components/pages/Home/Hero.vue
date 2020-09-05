@@ -1,7 +1,7 @@
 <template>
-    <div class="relative rounded-lg shadow-2xl mt-8">
+    <div class="hero relative rounded-lg">
         <img 
-            src="../assets/images/Hero1.png" 
+            src="@/assets/images/Hero1.png" 
             class="object-contain">
         <div class="darkLayer rounded-lg"></div>
         <div class="
@@ -17,22 +17,28 @@
                 your anime needs to make your watching 
                 journey more fun than ever. 
             </p>
-            <button class="
-                text-white font-bold 
-                w-40 py-4 rounded-lg
-                text-lg"
-                > Add Anime </button>
+            <ButtonPrimary text="Add Anime" />
         </div>
     </div>    
 </template>
 
 <script>
+import ButtonPrimary from '@/components/common/Buttons/ButtonPrimary'
+
 export default {
-    name: "Hero"
+    name: "Hero",
+    components: {
+        ButtonPrimary
+    }
 }
 </script>
 
 <style scoped>
+
+    .hero {
+        box-shadow: -1px 4px 5px 0px rgba(0,0,0,0.75);
+    }
+
     .darkLayer {
         background: linear-gradient(45deg, rgba(38,30,72,1) 10%,rgba(38,30,72,0.83) 25%,rgba(0,0,0,0) 100%);
         width: 100%;
@@ -43,9 +49,5 @@ export default {
 
     .info {
         max-width: 600px;
-    }
-
-    button {
-        background: var(--color-primary-1);
     }
 </style>

@@ -13,15 +13,15 @@
             <p class="title text-white text-2xl font-bold"> {{ item.attributes.canonicalTitle }} </p>
             <p class="episode text-lg text-gray-400 font-bold"> Episode 1 </p>
         </div>
-        <div class="rating font-bold absolute text-xl z-10"> {{ item.attributes.averageRating }} </div>
-        <div class="darkLayer"></div>
+        <div class="top-0 mx-4 my-2 color-primary-1 font-bold absolute text-xl z-10"> {{ item.attributes.averageRating }} </div>
+        <div class="darkLayer w-full h-full"></div>
     </div>    
 </template>
 
 <script>
 
 export default {
-    name: "CardA",
+    name: "Card",
     props: ['item'],
 }
 </script>
@@ -33,23 +33,19 @@ export default {
         height: 200px !important;
     }
 
+    .card {
+        box-shadow: -1px 4px 5px 0px rgba(0,0,0,0.75);
+    }
+
     .card:hover .darkLayer {
         cursor: pointer;
         opacity: 0.6;
-    }
-
-    .rating {
-        color: var(--color-primary-1);
-        top: 12px;
-        right: 12px;
     }
 
     .darkLayer {
         background: #000;
         opacity: 0.2;
         position: absolute;
-        width: 320px;
-        height: 200px;
         top: 0;
     }
 </style>

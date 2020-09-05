@@ -8,8 +8,8 @@
             </button>
         </header>
 
-        <div class="flex shadow-2xl">
-            <CardA 
+        <div class="flex">
+            <Card 
                 v-for="item in list" 
                 :key="item.id" 
                 v-bind:item="item"/>
@@ -18,14 +18,14 @@
 </template>
 
 <script>
-import CardA from './CardA'
-import RightArrowIcon from '../assets/icons/RightArrow.svg'
+import Card from './Card'
+import RightArrowIcon from '@/assets/icons/RightArrow.svg'
 
 export default {
     name: "Slider",    
     props: ['topic', 'list'],
     components: {
-        CardA,
+        Card,
         RightArrowIcon
     }
 }

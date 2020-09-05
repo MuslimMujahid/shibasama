@@ -15,7 +15,7 @@
     </div>
 </template>
 <script>
-import SearchIcon from '../assets/icons/SearchIcon.svg'
+import SearchIcon from '@/assets/icons/SearchIcon.svg'
 
 export default {
     name: "SearchBar",

@@ -2,7 +2,9 @@
 
 ## Progress
 ### Working on
-- Home page 
+- Home \[Completed\]
+- Library \[Completed\]
+- Watching List
 
 ### Problem
 - currently nothing
