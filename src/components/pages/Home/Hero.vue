@@ -1,5 +1,5 @@
 <template>
-    <div class="hero relative rounded-lg">
+    <div class="hero relative br-2xl">
         <img 
             src="@/assets/images/Hero1.png" 
             class="object-contain">

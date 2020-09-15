@@ -12,14 +12,16 @@
             bg-black bg-opacity-50">
 
             <div class="header hidden font-bold text-lg">
-                <p class="color-greyscale-5"> Summer, 2020 </p>
-                <p class="color-primary-1"> 8.8 </p>
+                <div>
+                    <p class="color-greyscale-5"> Summer, 2020 </p>
+                    <p class="color-primary-1"> 8.8 </p>
+                </div>
+                <input type="checkbox" class="w-4 h-4">
             </div>
 
             <div class="buttons hidden">
-                <PrevButton class="card-button"/>
-                <PlayButton class="card-button"/>
-                <NextButton class="card-button"/>
+                <CircleButtonMinus class="card-button mr-12"/>
+                <CircleButtonPlus class="card-button"/>
             </div>
             
             <div class="flex justify-between items-center">
@@ -35,17 +37,15 @@
 </template>
 
 <script>
-import PlayButton from '@/assets/icons/PlayButton.svg'
-import PrevButton from '@/assets/icons/PrevButton.svg'
-import NextButton from '@/assets/icons/NextButton.svg'
+import CircleButtonPlus from '@/assets/icons/CircleButtonPlus.svg'
+import CircleButtonMinus from '@/assets/icons/CircleButtonMinus.svg'
 import MoreButton from '@/assets/icons/MoreButton.svg' 
 
 export default {
     name: "Card",
     components: {
-        PlayButton,
-        PrevButton,
-        NextButton,
+        CircleButtonPlus,
+        CircleButtonMinus,
         MoreButton
     }
 }
@@ -68,13 +68,19 @@ export default {
         height: 100%;
     }
 
-    .card:hover .detail .header, .card:hover .MoreButton {
+    .card:hover .MoreButton {
         display: block;
     }
 
-    .card:hover .detail .buttons {
+    .card:hover .detail .header {
         display: flex;
         justify-content: space-between;
+        align-items: center;
+    }
+    
+    .card:hover .detail .buttons {
+        display: flex;
+        justify-content: center;
         align-items: center;
     }
 

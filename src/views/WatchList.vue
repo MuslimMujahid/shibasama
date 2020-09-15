@@ -1,17 +1,21 @@
 <template>
     <div class="wrapper relative mt-8 justify-center"> 
-        <!-- <AddAnimeModal class="left-0 right-0 mx-auto z-40" /> -->
-        <History closeHistory="toggleHistory" :class="{'hidden': !showHistory}" v-on:close-history="toggleHistory"
-            class="absolute left-0 right-0 mx-auto z-40"/>
         <div class="buttons flex justify-between w-full">
-            <div>
-                <ButtonSecondary text="Add" class="mr-5"/>
-                <ButtonSecondary text="Refresh" />
+            <div class="flex">
+                <ButtonSecondary text="Select All" class="mr-5"/>
+                <ButtonSecondary text="Move to" />
+                <div class="flex">
+                    <PlanIcon />
+                    <WatchingIcon />
+                    <SeenIcon />
+                    <OnholdIcon />
+                    <DroppedIcon />
+                </div>
             </div>
-            <ButtonPrimary text="History" v-on:clicked="toggleHistory" class="self-end" />
+            <ButtonPrimary text="Import" v-on:clicked="toggleHistory" class="self-end" />
         </div>
         <List class="mt-5" />
-        <TagBar class="ml-6 lg:ml-24 relative" :style="{'top': tagbarTop + 'px'}"/>
+        <WatchStatusBar class="ml-6 lg:ml-24 relative" :style="{'top': watchStatusBarTop + 'px'}"/>
         <!-- <div 
             class="darkLayer  
                 bg-black opacity-25 
@@ -25,37 +29,35 @@
 <script>
 import ButtonPrimary from '@/components/common/Buttons/ButtonPrimary'
 import ButtonSecondary from '@/components/common/Buttons/ButtonSecondary'
-import TagBar from '@/components/pages/Library/TagBar'
-import List from '@/components/pages/Library/List'
-import History from '@/components/pages/Library/History/History'
-// import AddAnimeModal from '../components/Modals/AddAnime'
-
+import WatchStatusBar from '@/components/pages/WatchList/WatchStatusBar'
+import List from '@/components/pages/WatchList/List'
+import PlanIcon from '@/assets/icons/PlanIcon.svg'
+import WatchingIcon from '@/assets/icons/WatchingIcon.svg'
+import SeenIcon from '@/assets/icons/SeenIcon.svg'
+import OnholdIcon from '@/assets/icons/OnholdIcon.svg'
+import DroppedIcon from '@/assets/icons/DroppedIcon.svg'
 
 export default {
     name: 'Library',
     components: {
         ButtonPrimary,
         ButtonSecondary,
-        TagBar,
+        WatchStatusBar,
         List,
-        History
-        // AddAnimeModal
+        PlanIcon,
+        WatchingIcon,
+        SeenIcon,
+        OnholdIcon,
+        DroppedIcon
     },
     data() {
         return {
-            showHistory: false,
-            showAddAnime: false,
-            tagbarTop: 0
-        }
-    },
-    methods: {
-        toggleHistory() {
-            this.showHistory = !this.showHistory
+            watchStatusBarTop: 0 
         }
     },
     created() {
         window.addEventListener('scroll', () => {
-            this.tagbarTop = window.scrollY
+            this.watchStatusBarTop = window.scrollY
         })
     }
 }
@@ -75,9 +77,9 @@ export default {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 1rem;
-    }
+    } 
 
-    .TagBar {
+    .WatchStatusBar {
         grid-row: 1/3;
     }
 
@@ -92,5 +94,4 @@ export default {
             grid-template-columns: repeat(4, 1fr);
         } 
     }
-
 </style>

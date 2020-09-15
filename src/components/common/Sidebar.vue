@@ -1,8 +1,14 @@
 <template>
     <div class="sidebar flex flex-col z-20">
-        <HomeIcon class="icon"/>
-        <WatchListIcon class="icon"/>
-        <LibraryIcon class="icon"/>
+        <router-link to='/'>
+            <HomeIcon class="icon"/>
+        </router-link>
+        <router-link to='/watchlist'>
+            <WatchListIcon class="icon"/>
+        </router-link>
+        <router-link to='/library'>
+            <LibraryIcon class="icon"/>
+        </router-link>
         <SeasonIcon class="icon"/>
         <NewsIcon class="icon"/>
     </div>     

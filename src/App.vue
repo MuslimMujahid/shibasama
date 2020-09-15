@@ -15,7 +15,7 @@ import Sidebar from './components/common/Sidebar'
 
 export default {
   name: 'App',
-  components: {
+  components: { 
     Navbar,
     Sidebar
   }
@@ -54,14 +54,17 @@ export default {
 
   #app {
     width: 100%;
-    /* min-width: 768px; */
-    padding: 0 10vw;
-    /* padding: 0 60px; */
+    padding: 0 2vw;
   }
 
   .Sidebar {
     top: 120px;
-    left: 10px;
+    left: -34px;
+  }
+
+  .Sidebar:hover {
+    left: 0;
+    transition: all ease-in .1s;
   }
 
   /* width */

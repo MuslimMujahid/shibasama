@@ -6,7 +6,7 @@
         
         <div class="px-8">
             <div class="listdata pr-1">
-                <div v-for="data in history" :key="data.id">
+                <div v-for="data in history" :key="data.id" class="mb-1">
                     <HistoryData v-bind:data="data" />
                 </div>
             </div>
